@@ -1,0 +1,19 @@
+{
+    "name":             "usualtool/ut-search",
+    "description":      "UT framework extension:TNTSearch.",
+    "keywords":         ["ut-search", "usualtool", "UT Framework"],
+    "homepage":         "http://frame.usualtool.com",
+    "license": "Apache-2.0",
+    "authors": [{
+        "name":         "HuangDou",
+        "email":        "292951110@qq.com"
+    }],
+    "require": {
+        "teamtnt/tntsearch": "^5"
+    },
+    "autoload": {
+        "psr-4": {
+            "usualtool\\Search\\": "src"
+        }
+    }
+}
