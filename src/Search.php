@@ -1,12 +1,12 @@
 <?php
 namespace usualtool\Search;
-use library\UsualToolInc\UTInc;
+use usualtool\Lib\Inc;
 use usualtool\Search\SplitWord;
 use TeamTNT\TNTSearch\TNTSearch;
-use library\UsualToolData\UTData;
+use usualtool\Lib\Data;
 class Search{
     public function __construct(){
-        $config = UTInc::GetConfig();
+        $config = Inc::GetConfig();
         $this->tnt = new TNTSearch();
         $this->tnt->loadConfig([
             'driver'    => 'mysql',
@@ -65,7 +65,7 @@ class Search{
     public function SearchData($table,$key,$ids){
         $data = array();
         foreach($ids as $rows){
-            $row = UTData::QueryData($table,"",$key."='$rows'")["querydata"][0];
+            $row = Data::QueryData($table,"",$key."='$rows'")["querydata"][0];
             $data[] = $row;
         }
         return $data;
